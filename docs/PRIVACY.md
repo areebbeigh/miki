@@ -10,7 +10,7 @@ Miki is developed as an open-source project. **The extension does not send your 
 
 **Data controller / contact:** Areeb Beigh
 
-**Project repository:** [[Replace with your public repo URL, e.g. `https://github.com/yourusername/miki`]](https://github.com/areebbeigh/miki)
+**Project repository:** https://github.com/areebbeigh/miki
 
 For privacy questions about this policy, contact us at the email above.
 
