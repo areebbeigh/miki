@@ -9,7 +9,8 @@
     "build": "vite build -c vite.content.config.ts && vite build -c vite.main.config.ts && node scripts/copy-manifest.mjs",
     "dev": "vite build -c vite.content.config.ts && vite build -c vite.main.config.ts && node scripts/copy-manifest.mjs --watch",
     "lint": "tsc --noEmit",
-    "test": "vitest run"
+    "test": "vitest run",
+    "store-screenshots": "bash scripts/make-store-screenshots.sh"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",

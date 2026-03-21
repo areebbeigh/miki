@@ -34,12 +34,17 @@ Load the unpacked extension from the `dist/` directory:
 | `npm run build` | Production build (`dist/`) |
 | `npm run lint` | Typecheck (`tsc --noEmit`) |
 | `npm test` | Unit tests (Vitest) |
+| `npm run store-screenshots` | Chrome Web Store PNGs (**1280×800**, white pad; needs **ffmpeg**) → [`docs/store-screenshots/`](docs/store-screenshots/) |
 
 The build runs two Vite passes: a **single IIFE** bundle for the content script (required for MV3 injection), then **background + options** as ES modules.
 
 ### Project layout
 
 ```
+docs/
+  PRIVACY.md          # Privacy policy (link from Chrome Web Store)
+  screenshots/        # In-repo README captures
+  store-screenshots/  # Chrome Web Store (1280×800 PNGs, see npm run store-screenshots)
 icons/            # Toolbar icon (SVG + PNG sizes for manifest)
 src/
   adapters/       # Wiki heuristics (MediaWiki, Git hosts, generic)
@@ -105,6 +110,8 @@ Plain automation without `--load-extension` / your profile may still show the wi
 ## Privacy
 
 Settings stay in **chrome.storage** (local/sync per user choice). No remote analytics or third-party servers are used by this extension.
+
+**Privacy policy (for Chrome Web Store / users):** [`docs/PRIVACY.md`](docs/PRIVACY.md) — host the file on GitHub and use the raw or `blob` URL in the store listing after replacing the bracketed contact/repo placeholders.
 
 ## License
 
