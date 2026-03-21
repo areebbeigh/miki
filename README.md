@@ -94,7 +94,9 @@ Captures live under [`docs/screenshots/`](docs/screenshots/) (**Minecraft Wiki**
 
 ![Toolbar popup](docs/screenshots/ui-popup.png)
 
-![Library dashboard](docs/screenshots/ui-library-dashboard.png)
+![Library — bookmarks](docs/screenshots/ui-library-dashboard.png)
+
+![Library — highlights](docs/screenshots/ui-library-highlights.png)
 
 ![Options (full page)](docs/screenshots/ui-options-full.png)
 
