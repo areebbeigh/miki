@@ -1,0 +1,169 @@
+:root {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  line-height: 1.45;
+  color: #111318;
+  background: #f4f5f8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #e8eaef;
+    background: #0f1115;
+  }
+}
+
+body {
+  margin: 0;
+}
+
+.page {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+}
+
+.header h1 {
+  margin: 0 0 0.35rem;
+  font-size: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.lede {
+  margin: 0;
+  opacity: 0.85;
+}
+
+.tabs {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin: 1.5rem 0 1rem;
+}
+
+.tab {
+  font: inherit;
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid #c9ced8;
+  background: #fff;
+  color: inherit;
+  cursor: pointer;
+}
+
+@media (prefers-color-scheme: dark) {
+  .tab {
+    border-color: #3a424e;
+    background: #151821;
+  }
+}
+
+.tab.active {
+  border-color: #2563eb;
+  background: #dbeafe;
+  color: #1e3a8a;
+}
+
+@media (prefers-color-scheme: dark) {
+  .tab.active {
+    background: #1e3a5f;
+    color: #bfdbfe;
+  }
+}
+
+.panel {
+  display: none;
+}
+
+.panel.active {
+  display: block;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card {
+  border: 1px solid #d9dee8;
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  background: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  .card {
+    border-color: #2a2f38;
+    background: #151821;
+  }
+}
+
+.card-title {
+  font-weight: 600;
+  margin: 0 0 0.25rem;
+  font-size: 0.95rem;
+}
+
+.card-meta {
+  margin: 0;
+  font-size: 0.8rem;
+  opacity: 0.8;
+  word-break: break-all;
+}
+
+.card-actions {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  font: inherit;
+  padding: 0.35rem 0.65rem;
+  border-radius: 6px;
+  border: 1px solid #c9ced8;
+  background: #fff;
+  color: inherit;
+  cursor: pointer;
+}
+
+@media (prefers-color-scheme: dark) {
+  .btn {
+    border-color: #3a424e;
+    background: #151821;
+  }
+}
+
+.btn.danger {
+  border-color: #dc2626;
+  color: #b91c1c;
+}
+
+.empty {
+  margin: 0.5rem 0 0;
+  opacity: 0.85;
+}
+
+.empty.hidden {
+  display: none;
+}
+
+.hl-text {
+  margin: 0.35rem 0 0;
+  padding: 0.5rem 0.6rem;
+  border-radius: 6px;
+  background: #fde047;
+  color: #0a0a0a;
+  font-size: 0.9rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .hl-text {
+    background: #fde047;
+    color: #0a0a0a;
+  }
+}

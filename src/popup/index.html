@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Miki</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <h1 class="title">Miki</h1>
+      <div class="grid">
+        <button type="button" class="btn" id="btn-toggle">Toggle sidebar</button>
+        <button type="button" class="btn" id="btn-top">Scroll to top</button>
+        <button type="button" class="btn primary" id="btn-hl-now">Highlight selection</button>
+        <button type="button" class="btn" id="btn-reading">Toggle focused reading</button>
+      </div>
+      <p class="hint">Select text on the page, then <strong>Highlight selection</strong> (or Alt+Shift+H). Or open the library for bookmarks &amp; history.</p>
+      <div class="links">
+        <button type="button" class="link" id="btn-dashboard">Open library…</button>
+        <button type="button" class="link muted" id="btn-options">Options</button>
+      </div>
+    </main>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

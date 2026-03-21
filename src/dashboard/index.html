@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Miki — Library</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <h1>Library</h1>
+        <p class="lede">Bookmarks, highlights, and wikis you’ve visited with Miki.</p>
+      </header>
+
+      <nav class="tabs" aria-label="Sections">
+        <button type="button" class="tab active" data-tab="bookmarks">Bookmarks</button>
+        <button type="button" class="tab" data-tab="highlights">Highlights</button>
+        <button type="button" class="tab" data-tab="wikis">Wiki directory</button>
+      </nav>
+
+      <section id="panel-bookmarks" class="panel active">
+        <ul id="list-bookmarks" class="list"></ul>
+        <p id="empty-bookmarks" class="empty hidden">No section bookmarks yet. Use ☆ in the sidebar on a wiki page.</p>
+      </section>
+
+      <section id="panel-highlights" class="panel">
+        <ul id="list-highlights" class="list"></ul>
+        <p id="empty-highlights" class="empty hidden">No highlights yet. Select text and use the popup or toolbar.</p>
+      </section>
+
+      <section id="panel-wikis" class="panel">
+        <ul id="list-wikis" class="list"></ul>
+        <p id="empty-wikis" class="empty hidden">Visit wiki pages with Miki enabled to populate this list.</p>
+      </section>
+    </div>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,169 @@
+:root {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  line-height: 1.45;
+  color: #111318;
+  background: #f4f5f8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #e8eaef;
+    background: #0f1115;
+  }
+}
+
+body {
+  margin: 0;
+}
+
+.page {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+}
+
+.header h1 {
+  margin: 0 0 0.35rem;
+  font-size: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.lede {
+  margin: 0;
+  opacity: 0.85;
+}
+
+.aux {
+  margin: 0.75rem 0 0;
+}
+
+.linkish {
+  font: inherit;
+  padding: 0;
+  border: none;
+  background: none;
+  color: #2563eb;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.form {
+  margin-top: 1.75rem;
+}
+
+fieldset {
+  border: 1px solid #d9dee8;
+  border-radius: 10px;
+  padding: 1rem 1rem 1.1rem;
+  margin: 0 0 1.25rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  fieldset {
+    border-color: #2a2f38;
+  }
+}
+
+legend {
+  padding: 0 0.35rem;
+  font-weight: 600;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem 1rem;
+  margin: 0.55rem 0;
+}
+
+.row span:first-child {
+  min-width: 10rem;
+}
+
+.row.full {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.row .grow {
+  flex: 1;
+  min-width: 0;
+}
+
+input.hex {
+  width: 6.5rem;
+  font-family: ui-monospace, monospace;
+}
+
+select,
+textarea,
+input[type='range'] {
+  font: inherit;
+}
+
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.65rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #c9ced8;
+  background: #fff;
+  color: inherit;
+}
+
+@media (prefers-color-scheme: dark) {
+  textarea {
+    border-color: #3a424e;
+    background: #151821;
+  }
+}
+
+.hint {
+  margin: 0 0 0.5rem;
+  font-size: 0.9rem;
+  opacity: 0.88;
+}
+
+.hint code {
+  font-size: 0.85em;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.btn {
+  font: inherit;
+  padding: 0.55rem 1.1rem;
+  border-radius: 8px;
+  border: 1px solid #c9ced8;
+  background: #fff;
+  color: inherit;
+  cursor: pointer;
+}
+
+@media (prefers-color-scheme: dark) {
+  .btn {
+    border-color: #3a424e;
+    background: #151821;
+  }
+}
+
+.btn.primary {
+  border-color: #2563eb;
+  background: #2563eb;
+  color: #fff;
+}
+
+.btn.primary:hover {
+  filter: brightness(1.05);
+}
+
+.status {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}

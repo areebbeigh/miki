@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Miki — Options</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <h1>Miki</h1>
+        <p class="lede">Outline sidebar for wiki-style pages. Changes apply on save.</p>
+        <p class="aux">
+          <button type="button" class="linkish" id="open-library">Open library (bookmarks, highlights, wiki directory)</button>
+        </p>
+      </header>
+
+      <form id="form" class="form">
+        <fieldset>
+          <legend>General</legend>
+          <label class="row">
+            <input type="checkbox" id="enabled" name="enabled" />
+            <span>Enable Miki</span>
+          </label>
+          <label class="row">
+            <span>Default detection</span>
+            <select id="defaultWikiMode" name="defaultWikiMode">
+              <option value="auto">Auto (recommended)</option>
+              <option value="on">Always try (still needs headings)</option>
+              <option value="off">Off unless allowlisted</option>
+            </select>
+          </label>
+          <label class="row">
+            <input type="checkbox" id="useSyncStorage" name="useSyncStorage" />
+            <span>Sync settings across signed-in Chrome profiles (uses sync quota)</span>
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Sidebar</legend>
+          <label class="row">
+            <span>Start expanded</span>
+            <input type="checkbox" id="sidebarOpen" name="sidebarOpen" />
+          </label>
+          <label class="row">
+            <span>Position</span>
+            <select id="sidebarPosition" name="sidebarPosition">
+              <option value="left">Left</option>
+              <option value="right">Right</option>
+            </select>
+          </label>
+          <label class="row">
+            <span>Width (px)</span>
+            <input type="range" id="sidebarWidthPx" name="sidebarWidthPx" min="200" max="420" step="10" />
+            <output id="sidebarWidthOut" for="sidebarWidthPx">280</output>
+          </label>
+          <label class="row">
+            <span>Layout</span>
+            <select id="layoutMode" name="layoutMode">
+              <option value="push">Push content (add page margin)</option>
+              <option value="overlay">Overlay (fixed on top of page)</option>
+            </select>
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Focused reading mode</legend>
+          <p class="hint">
+            Toggle “Focus read” in the sidebar or popup to hide site chrome and show only the article. Width respects the
+            Miki sidebar margin. Colors and typography apply while focus mode is on.
+          </p>
+          <label class="row">
+            <span>Background</span>
+            <input type="color" id="readingBackground" name="readingBackground" />
+            <input type="text" id="readingBackgroundHex" class="hex" maxlength="7" spellcheck="false" />
+          </label>
+          <label class="row">
+            <span>Text</span>
+            <input type="color" id="readingTextColor" name="readingTextColor" />
+            <input type="text" id="readingTextHex" class="hex" maxlength="7" spellcheck="false" />
+          </label>
+          <label class="row">
+            <span>Links</span>
+            <input type="color" id="readingLinkColor" name="readingLinkColor" />
+            <input type="text" id="readingLinkHex" class="hex" maxlength="7" spellcheck="false" />
+          </label>
+          <label class="row">
+            <span>Font size (px)</span>
+            <input type="number" id="readingFontSizePx" name="readingFontSizePx" min="12" max="32" step="1" />
+          </label>
+          <label class="row">
+            <span>Line height</span>
+            <input type="number" id="readingLineHeight" name="readingLineHeight" min="1" max="2.5" step="0.05" />
+          </label>
+          <label class="row">
+            <span>Font</span>
+            <select id="readingFontPreset" name="readingFontPreset">
+              <option value="system">System UI</option>
+              <option value="serif">Georgia / serif</option>
+              <option value="literata">Literata-style (serif)</option>
+              <option value="mono">Monospace</option>
+              <option value="custom">Custom (below)</option>
+            </select>
+          </label>
+          <label class="row full">
+            <span>Custom font stack</span>
+            <input type="text" id="readingFontFamily" name="readingFontFamily" class="grow" spellcheck="false" />
+          </label>
+          <label class="row">
+            <span>Max width</span>
+            <input type="text" id="readingMaxWidth" name="readingMaxWidth" placeholder="72ch or 900px" />
+          </label>
+          <label class="row">
+            <span>Page padding (px)</span>
+            <input type="number" id="readingPagePaddingPx" name="readingPagePaddingPx" min="8" max="80" step="2" />
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Navigation</legend>
+          <label class="row">
+            <input type="checkbox" id="smoothScroll" name="smoothScroll" />
+            <span>Smooth scroll to sections (respects reduced motion)</span>
+          </label>
+          <label class="row">
+            <input type="checkbox" id="updateHash" name="updateHash" />
+            <span>Update URL hash when jumping to a section</span>
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Site rules</legend>
+          <p class="hint">
+            One hostname per line. Lines starting with <code>!</code> deny. Examples:
+            <code>wiki.example.com</code>, <code>*.internal.corp</code>
+          </p>
+          <textarea id="domainRules" name="domainRules" rows="8" spellcheck="false" placeholder="wiki.example.com&#10;!mail.google.com"></textarea>
+        </fieldset>
+
+        <div class="actions">
+          <button type="submit" class="btn primary">Save</button>
+          <span id="status" class="status" role="status" aria-live="polite"></span>
+        </div>
+      </form>
+    </div>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>
