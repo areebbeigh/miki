@@ -1,10 +1,10 @@
 # Miki
 
 <img align="left" src="icons/icon.svg" alt="Alt text" width="100" height="100">
-<small>The toolbar icon is **absolutely** a cat: whiskers, a small Times-style **W** where the mouth goes, and the confidence of someone who spent five minutes in SVG and called it branding.</small>
+<small>The toolbar icon is <b><i>absolutely</i></b> a cat: whiskers, a small Times-style "W" where the mouth goes, and the confidence of someone who spent five minutes in SVG and called it branding.</small>
 
 <br clear="left"/>
-
+<br clear="left"/>
 
 Chrome extension (Manifest V3) that adds a **pinned, collapsible outline sidebar** to wiki-style pages: heading-based TOC, scrollspy, **section bookmarks** (☆ in the sidebar), **back to top**, **text highlights** (pen-style marks stored locally), a **wiki visit directory**, and a **Library** popup/dashboard for bookmarks, highlights, and history.
 
