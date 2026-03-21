@@ -1,5 +1,11 @@
 # Miki
 
+<img align="left" src="icons/icon.svg" alt="Alt text" width="100" height="100">
+<small>The toolbar icon is **absolutely** a cat: whiskers, a small Times-style **W** where the mouth goes, and the confidence of someone who spent five minutes in SVG and called it branding.</small>
+
+<br clear="left"/>
+
+
 Chrome extension (Manifest V3) that adds a **pinned, collapsible outline sidebar** to wiki-style pages: heading-based TOC, scrollspy, **section bookmarks** (☆ in the sidebar), **back to top**, **text highlights** (pen-style marks stored locally), a **wiki visit directory**, and a **Library** popup/dashboard for bookmarks, highlights, and history.
 
 ## Product spec
@@ -34,6 +40,7 @@ The build runs two Vite passes: a **single IIFE** bundle for the content script 
 ### Project layout
 
 ```
+icons/            # Toolbar icon (SVG + PNG sizes for manifest)
 src/
   adapters/       # Wiki heuristics (MediaWiki, Git hosts, generic)
   background/     # Service worker, commands, storage broadcast
@@ -92,10 +99,6 @@ Captures live under [`docs/screenshots/`](docs/screenshots/) (**Minecraft Wiki**
 ![Options (full page)](docs/screenshots/ui-options-full.png)
 
 Plain automation without `--load-extension` / your profile may still show the wiki **without** Miki; use **Load unpacked** on `dist/` or MCP flags that load the extension when reproducing these shots.
-
-### Upgrading from ModernWiki
-
-If you used the extension under the old **ModernWiki** name, **settings, bookmarks, highlights, and wiki history** are migrated automatically from `modernwiki_*` storage keys the first time they are read. Reload the extension after updating.
 
 ## Privacy
 
