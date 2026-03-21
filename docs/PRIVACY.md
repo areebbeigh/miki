@@ -8,7 +8,7 @@ Miki is developed as an open-source project. **The extension does not send your 
 
 ## Who we are
 
-**Data controller / contact:** Areeb Beigh
+**Data controller / contact:** Areeb Beigh (areebbeigh@gmail.com)
 
 **Project repository:** https://github.com/areebbeigh/miki
 
