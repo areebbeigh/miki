@@ -8,6 +8,8 @@
 
 Chrome extension (Manifest V3) that adds a **pinned, collapsible outline sidebar** to wiki-style pages: heading-based TOC, scrollspy, **section bookmarks** (☆ in the sidebar), **back to top**, **text highlights** (pen-style marks stored locally), a **wiki visit directory**, and a **Library** popup/dashboard for bookmarks, highlights, and history.
 
+[Chrome Webstore Listing](ewebstore.google.com/detail/Miki/boglodnlaoaeeenelfhhjphlmoclmgdl)
+
 ## Product spec
 
 See [`specs/PRD.md`](specs/PRD.md).
